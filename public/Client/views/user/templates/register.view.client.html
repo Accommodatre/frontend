@@ -13,22 +13,25 @@
            id="email"/>
 
     <label for="firstname">First name</label>
+    <!--ng-model="user.firstname"-->
     <input name="firstname"
-           ng-model="user.firstname"
-           placeholder="John"
+            ng-model="user.first_name"
+            placeholder="John"
            class="form-control"
            id="firstname"/>
 
     <label for="lastname">Last name</label>
+    <!--ng-model="user.lastname"-->
     <input name="lastname"
-           ng-model="user.lastname"
+           ng-model="user.last_name"
            placeholder="Snow"
            class="form-control"
            id="lastname"/>
 
 <label for="username">Username</label>
+    <!--ng-model="user.username"-->
 <input name="username"
-       ng-model="user.username"
+
        placeholder="alice"
        class="form-control"
        id="username"/>
@@ -42,8 +45,9 @@
        id="password"/>
 
     <label for="verifypassword">Verify Password</label>
+    <!--ng-model="user.password2"-->
     <input name="password2"
-           ng-model="user.password2"
+            ng-model="user.password_confirmation"
            placeholder="john@snow123"
            class="form-control"
            type="password"
@@ -51,8 +55,9 @@
 
     <!--Implement date picker-->
     <label for="dob">Date Of Birth</label>
+    <!--ng-model="user.dob"-->
     <input name="dob"
-           ng-model="user.dob"
+
            type="date"
            class="form-control"
            type="password"

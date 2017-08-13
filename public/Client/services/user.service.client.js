@@ -29,8 +29,7 @@
         }
 
         function registerUser(user) {
-            var url = "/api/user";
-
+            var url = "http://localhost:3000/auth";
             return $http.post(url, user);
         }
 
