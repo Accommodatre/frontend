@@ -1,40 +1,37 @@
 <!--Fix user input-->
 <div class="container-fluid">
-    <div ng-show="model.error" class="alert alert-danger">
-        {{model.error}}
-    </div>
     <h2>Register</h2>
 
     <label for="email">Email address</label>
     <input name="email"
+           type="email"
            ng-model="user.email"
            placeholder="john@gmail.com"
            class="form-control"
            id="email"/>
+    <div ng-show="model.emailError" style="color:#ff0000">
+        {{model.emailError}}
+    </div>
 
     <label for="firstname">First name</label>
-    <!--ng-model="user.firstname"-->
-    <input name="firstname"
+     <input name="firstname"
             ng-model="user.first_name"
             placeholder="John"
            class="form-control"
            id="firstname"/>
+    <div ng-show="model.fnameError" style="color:#ff0000">
+        {{model.fnameError}}
+    </div>
 
     <label for="lastname">Last name</label>
-    <!--ng-model="user.lastname"-->
     <input name="lastname"
            ng-model="user.last_name"
            placeholder="Snow"
            class="form-control"
            id="lastname"/>
-
-<label for="username">Username</label>
-    <!--ng-model="user.username"-->
-<input name="username"
-
-       placeholder="alice"
-       class="form-control"
-       id="username"/>
+    <div ng-show="model.lnameError" style="color:#ff0000">
+        {{model.lnameError}}
+    </div>
 
 <label for="password">Password</label>
 <input name="password"
@@ -43,25 +40,31 @@
        placeholder="john@snow123"
        type="password"
        id="password"/>
+    <div ng-show="model.passwordError" style="color:#ff0000">
+        {{model.passwordError}}
+    </div>
 
     <label for="verifypassword">Verify Password</label>
-    <!--ng-model="user.password2"-->
     <input name="password2"
             ng-model="user.password_confirmation"
            placeholder="john@snow123"
            class="form-control"
            type="password"
            id="verifypassword"/>
+    <div ng-show="model.cpasswordError" style="color:#ff0000">
+        {{model.cpasswordError}}
+    </div>
 
     <!--Implement date picker-->
     <label for="dob">Date Of Birth</label>
-    <!--ng-model="user.dob"-->
-    <input name="dob"
-
+   <input name="dob"
            type="date"
            class="form-control"
            type="password"
            id="dob"/>
+    <!--<div ng-show="model.dobError" style="color:#ff0000">-->
+        <!--{{model.dobError}}-->
+<!--</div>-->
 
 
     <a class="btn btn-default btn-primary btn-block"

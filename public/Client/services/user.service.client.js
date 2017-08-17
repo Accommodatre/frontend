@@ -14,7 +14,7 @@
 
         var api = {
             "findUserByUsername": findUserByUsername,
-            "findUserByUsernameAndPassword": findUserByUsernameAndPassword,
+            "login": login,
             "findUserById": findUserById,
             "registerUser": registerUser,
             "updateUser": updateUser
@@ -41,12 +41,13 @@
             return $http.get("/api/user/"+userId);
         }
 
-        function findUserByUsernameAndPassword(username, password) {
-
-            var url = "/api/user?username="+username+"&password="+password;
-            // /user?username=alice&password=alice
-
-            return $http.get(url);
+        function login(email, password) {
+            var credentials = {
+                email: email,
+                password: password
+            };
+            var url = "http://localhost:3000/auth/sign_in";
+            return $http.post(url,credentials);
 
         }
 
