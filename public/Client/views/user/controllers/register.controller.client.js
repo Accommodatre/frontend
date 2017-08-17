@@ -15,20 +15,21 @@
 
          function registerUser(user) {
              model = this;
+             model.errors = {}
              if (typeof user === 'undefined' || typeof user.email === 'undefined') {
-                 model.emailError = "Please provide valid email address.";
+                 model.errors.emailError = "Please provide valid email address.";
              }
              else if (typeof user.first_name === "undefined") {
-                 model.fnameError = "Please provide first name.";
+                 model.errors.fnameError = "Please provide first name.";
              }
              else if (typeof user.last_name === "undefined") {
-                 model.lnameError = "Please provide last name.";
+                 model.errors.lnameError = "Please provide last name.";
              }
              else if (typeof user.password === "undefined") {
-                 model.passwordError = "Invalid password provided.";
+                 model.errors.passwordError = "Invalid password provided.";
              }
              else if (user.password !== user.password_confirmation) {
-                 model.cpasswordError = "Confirmation password not match.";
+                 model.errors.cpasswordError = "Confirmation password not match.";
              }
              // else if (typeof user.dob === "undefined") {
              //     model.dobError = "Please provide your birthdate.";

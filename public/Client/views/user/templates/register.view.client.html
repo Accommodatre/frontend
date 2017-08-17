@@ -9,8 +9,8 @@
            placeholder="john@gmail.com"
            class="form-control"
            id="email"/>
-    <div ng-show="model.emailError" style="color:#ff0000">
-        {{model.emailError}}
+    <div ng-show="model.errors.emailError" style="color:#ff0000">
+        {{model.errors.emailError}}
     </div>
 
     <label for="firstname">First name</label>
@@ -19,8 +19,8 @@
             placeholder="John"
            class="form-control"
            id="firstname"/>
-    <div ng-show="model.fnameError" style="color:#ff0000">
-        {{model.fnameError}}
+    <div ng-show="model.errors.fnameError" style="color:#ff0000">
+        {{model.errors.fnameError}}
     </div>
 
     <label for="lastname">Last name</label>
@@ -29,8 +29,8 @@
            placeholder="Snow"
            class="form-control"
            id="lastname"/>
-    <div ng-show="model.lnameError" style="color:#ff0000">
-        {{model.lnameError}}
+    <div ng-show="model.errors.lnameError" style="color:#ff0000">
+        {{model.errors.lnameError}}
     </div>
 
 <label for="password">Password</label>
@@ -40,8 +40,8 @@
        placeholder="john@snow123"
        type="password"
        id="password"/>
-    <div ng-show="model.passwordError" style="color:#ff0000">
-        {{model.passwordError}}
+    <div ng-show="model.errors.passwordError" style="color:#ff0000">
+        {{model.errors.passwordError}}
     </div>
 
     <label for="verifypassword">Verify Password</label>
@@ -51,8 +51,8 @@
            class="form-control"
            type="password"
            id="verifypassword"/>
-    <div ng-show="model.cpasswordError" style="color:#ff0000">
-        {{model.cpasswordError}}
+    <div ng-show="model.errors.cpasswordError" style="color:#ff0000">
+        {{model.errors.cpasswordError}}
     </div>
 
     <!--Implement date picker-->
